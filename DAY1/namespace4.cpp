@@ -8,8 +8,8 @@
 
 // <xxx.h>		=> 		<cxxx>
 // <stdio.h>	=>		<cstdio>
-// <stdlib.h>	=>		<?>
-// <math.h>		=>		<?>
+// <stdlib.h>	=>		<cstdlib>
+// <math.h>		=>		<cmath>
 
 
 int main()
