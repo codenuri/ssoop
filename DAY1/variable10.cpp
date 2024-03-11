@@ -1,4 +1,4 @@
-#include <cstring>
+#include <cstring> // C언어의 <string.h> 의 C++ 버전(strcmp, strcpy 등)
 #include <string>  // C++ 표준의 "std::string" 이라는 타입
 #include <iostream>
 int main()
