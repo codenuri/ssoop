@@ -9,7 +9,9 @@ int count = 0;
 int main()
 {
 	int n3 = count; // ?? 왜 이 코드가 에러일까요 ?
-	
+					// => C++ 표준에 std::count() 가 있습니다.
+					// using namespace std 때문에 전역변수 count 와 이름 충돌!!
+
 	int n1 = min(3, 2);      // C++ 표준 함수. algorithm 헤더 필요
 	int n2 = std::min(3, 2); 
 }
