@@ -1,5 +1,5 @@
-﻿#include <cstdio>
-#include <iostream> 
+﻿#include <cstdio>	// printf, scanf
+#include <iostream> // std::cout, std::cin
 
 // 13 page
 int main()
