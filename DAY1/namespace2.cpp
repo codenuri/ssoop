@@ -1,4 +1,8 @@
-﻿// namespace 에 있는 함수는 접근하는 방법
+﻿// #1. namespace 에 있는 함수는 접근하는 방법 3가지
+// #2. using declaration 과 using directive 는 
+// => 전역에는 사용하지 마세요
+// => 사용하려면 함수 안에서만 사용하세요..
+
 #include <stdio.h>
 
 namespace Audio 
