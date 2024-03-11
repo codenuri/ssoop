@@ -8,9 +8,9 @@ int main()
 	n = 0x10; // 항상 4바이트 단위로 접근
 
 	char*  p1 = (char*)&n;
-	short* p2 = (char*)&n;
-	*p1 = 0x20;
+	short* p2 = (short*)&n;
+	*(p1+3) = 0x20;
 	*p2 = 0x33;
 
-	std::cout << n << std::endl;
+	std::cout << std::hex <<  n << std::endl;
 }
