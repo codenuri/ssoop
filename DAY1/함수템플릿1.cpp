@@ -1,7 +1,8 @@
 // 함수템플릿1.cpp
 #include <iostream>
 
-int Add(int a, int b)
+template<typename T>
+T Add(T a, T b)
 {
 	return a + b;
 }
