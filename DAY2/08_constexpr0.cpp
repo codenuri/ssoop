@@ -1,5 +1,5 @@
 // S/W 에서 "상수 관련 2가지 개념"
-// 1. immutable : 값을 변경할수 없는것!! 이라는 개념
+// 1. immutable : 값을 변경할수 없는것!! 이라는 개념 ( read only )
 // 2. constant expression : 컴파일 시간에 값을 알수 있는 것.
 
 // 일부 컴파일러에서 배열의 크기는 constant expression 이어야 한다.
