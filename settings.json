@@ -1,0 +1,98 @@
+{
+//	"window.zoomLevel": 8,   // 4K, 100%
+//	"window.zoomLevel": 4,   // 4K, 확대 비율 : 200%
+	"window.zoomLevel": 1.8, // 4K, 확대 비율 : 300%
+
+	"editor.matchBrackets": "near",
+	"editor.detectIndentation": false,
+	"editor.guides.indentation": false,
+	"editor.insertSpaces": false,
+	"editor.selectionHighlight": false,
+	"editor.occurrencesHighlight": "off",
+	"editor.snippetSuggestions" : "none",
+
+	"workbench.editor.showTabs": "single",
+	"editor.mouseWheelZoom": true,
+	"editor.mouseWheelScrollSensitivity": 1,		// 강의 및 개발
+
+        // & 12345 한글 
+    
+        "workbench.colorTheme": "Default Light+",
+
+    	"editor.fontFamily": "Consolas, '마루 부리'",
+        "editor.fontSize": 20,
+        "editor.fontWeight": "500",
+    
+        "terminal.integrated.shellIntegration.decorationsEnabled" :false,
+        //"terminal.integrated.fontFamily": "Consolas, '마루 부리'",
+        "terminal.integrated.fontFamily": "D2Coding, '마루 부리'",
+        "terminal.integrated.fontSize": 14,
+    //  	"window.zoomLevel": 2, 
+        "editor.renderWhitespace": "none",
+        "editor.lineNumbers": "on",
+        "editor.folding": false,
+        "editor.glyphMargin": false,
+        "editor.minimap.enabled": false,
+        "breadcrumbs.enabled": false,
+        "editor.scrollbar.horizontalScrollbarSize": 5,	// 촬영용
+        "editor.scrollbar.verticalScrollbarSize": 0,	// 촬영용
+    //	"editor.scrollbar.horizontalScrollbarSize": 5,	// 개발용 	
+    //	"editor.scrollbar.verticalScrollbarSize": 5,	// 개발용
+        "editor.hideCursorInOverviewRuler": true,
+        "editor.scrollBeyondLastColumn": 0,
+    
+        "workbench.colorCustomizations": {
+            "sideBySideEditor.border" :"#888888",
+            "editorGroupHeader.noTabsBackground":"#eeeeee",
+            "editorGroupHeader.border": "#cccccc",
+            "editor.background": "#ffffff",
+            "editor.selectionBackground": "#ffff99",
+            "editorLineNumber.foreground":"#bbbbbb",
+            "editor.lineHighlightBackground": "#ffffff",
+    
+            "terminal.background":"#3F556D",
+            "terminal.foreground":"#ffffff",
+          },
+    
+        // 주석 색상에 대한 고찰
+        "editor.tokenColorCustomizations": {
+            "comments": "#008800",
+    
+            "textMateRules": [
+              {
+                "name": "Comment",
+                "scope": [
+                  "comment",
+                  "comment.block",
+                  "comment.block.documentation",
+                  "comment.line",
+                  "comment.line.double-slash",
+                  "punctuation.definition.comment",
+                ],
+                "settings": {
+                  "fontStyle": "",
+                  // "fontStyle": "italic underline",
+                  // "fontStyle": "italic bold underline",
+                }
+              },
+            ]
+        },
+    
+        "workbench.preferredLightColorTheme": "Visual Studio Light",
+        "workbench.editor.splitInGroupLayout": "vertical",
+        "security.workspace.trust.untrustedFiles": "open",
+    
+        "workbench.startupEditor": "none",
+        "cmake.configureOnOpen": false,
+        "window.commandCenter": false,
+        "workbench.layoutControl.enabled": false,
+		"workbench.statusBar.visible": false,
+        "editor.codeActionsOnSave": {
+
+            
+		},
+		"workbench.activityBar.location": "hidden",
+		"extensions.ignoreRecommendations": true,
+		"editor.stickyScroll.enabled": false // 촬영
+    
+    }
