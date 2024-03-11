@@ -9,6 +9,11 @@
 using DWORD = int;
 using PF = void(*)();
 
+
+// typedef : 타입에 대한 별명 만 만들수 있습니다
+// using   : 타입에 대한 별명 + template 의 별명(이 기능 때문에 만든것) 
+
+
 int main()
 {
 	DWORD n; // int n
