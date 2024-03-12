@@ -27,9 +27,16 @@ int main()
 	//	       Car::cnt 로 접근 가능(단, public 인 경우만)
 	std::cout << Car::cnt << std::endl;
 
+
+	// 특징 2. 객체 생성시 static member 는 객체가 사용하는 메모리에 포함되지 않습니다
 	Car c1;
 	Car c2;
 
-//	std::cout << cnt << std::endl;	// 2
+	// 특징 3. static 멤버 데이타는 2가지 방법으로 접근 가능합니다.
+	std::cout << Car::cnt << std::endl;	// 클래스 이름 사용
+	std::cout << c1.cnt   << std::endl;	// 객체 이름 사용
+							// => cnt 가 c1 전용으로 오해할수 있고
+							// => cnt 가 static 인지 아닌지 구별 안됩니다.
+							// 그래서 클래스 이름으로 접근하는 것을 권장.
 	
 }
