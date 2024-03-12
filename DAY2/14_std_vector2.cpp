@@ -22,3 +22,5 @@ int main()
 // 1. vector 같은 것을 만들때 사용하는 문법 - class 관련 문법
 // 2. 이미 만들어진 표준라이브러리 vector 의 사용법을 배우는 것
 //    표준라이브러리 STL ( Standard Template Library )
+
+// 3. std::string 도 "class string" 으로 만들어진것
