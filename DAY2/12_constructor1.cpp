@@ -2,6 +2,14 @@
 #include <iostream>
 #include <string>
 
+// 객체지향 프로그래밍 : 필요한 타입을 먼저 만드는 것
+
+// 안전하고, 사용하기 쉬운 타입을 만들기 위해
+// => 많은 class 관련 문법을 알아야 합니다. ( 7 ~ 8 정도의 핵심 개념들)
+// 1. private, public
+// 2. 생성자/소멸자 
+
+
 class Person
 {
 //public:
