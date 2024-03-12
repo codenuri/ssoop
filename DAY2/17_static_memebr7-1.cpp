@@ -39,3 +39,6 @@ int main()
 	c.goo();    // 이렇게 호출해도 문법적으로 static 멤버함수는
 				// call goo() 즉, c 주소 전달 안됨
 }
+
+// 결론
+// => static 멤버 함수에서는 _static member_ 만(data, function) 접근 가능하다.
