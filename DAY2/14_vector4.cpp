@@ -17,7 +17,7 @@ int main()
 	{
 		std::cin >> n;
 
-		if ( n == 1 ) break;
+		if ( n == -1 ) break;
 
 		buff[cnt++] = n;
 
