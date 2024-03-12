@@ -15,11 +15,13 @@
 
 struct Rect
 {
+	// 멤버 데이타(다른 언어에서는 필드(field)) 라고 합니다.
 	int left;
 	int top;
 	int right;
 	int bottom;
 
+	// 멤버 함수(다른 언어는 메소드(method)) 라고 합니다
 	int get_area()
 	{
 		return (right - left) * (bottom - top);
