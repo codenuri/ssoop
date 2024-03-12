@@ -24,17 +24,15 @@ public:
 
 	void resize(int newsize)
 	{
-		if ( size < newsize ) // 커지는 경우
+		if ( sz < newsize ) // 커지는 경우
 		{
 			int* tmp = new int[newsize];
-
-			memcpy(tmp, ptr, sizeof(int)*size);
+			memcpy(tmp, ptr, sizeof(int)*sz);
 
 			delete[] ptr;
-
 			ptr = tmp;
 
-			size = newsize;
+			sz = newsize;
 		}
 		else
 		{
