@@ -1,5 +1,9 @@
 #include <iostream>
 
+
+// 아래 코드는 OCP를 위반한 안좋은 코드 입니다.
+// => 새로운 카메라가 등장하면 Person 의 코드는 계속 수정되어야 합니다.
+
 class Camera
 {
 public:
