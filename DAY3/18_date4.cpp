@@ -37,7 +37,7 @@ public:
 		Date tmp{year, month, day + 1};
 
 		// 아래 코드는 윤년 고려하지 않았습니다. 복습할때 추가해 보세요
-		if ( tmp.day  > days[month] )
+		if ( tmp.day  > days[month-1] )
 		{
 			tmp.day = 1;
 			tmp.month = tmp.month + 1;
