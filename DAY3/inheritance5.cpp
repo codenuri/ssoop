@@ -14,9 +14,21 @@ public:
 // => Student 생성자 만드세요
 // => main 에서 Student 객체 생성해 보세요
 
+class Student : public Person
+{
+	int id;
+public:
+//	Student(int id) : id{id} {}  // Student(int id) :  Person(), id{id} {}
+
+	Student(const std::string& name, int age, int id) 
+				: Person{name, age}, id{id} {} 
+};
 
 int main()
 {
+	Student s{"kim", 20, 15};
+
+
 //	Person p;	// 이렇게 객체를 만들수 있게 하면 좋을까요 ?
 				// 이름과 나이가 초기화 되지 않은 쓰레기값을 가지는 객체
 }
