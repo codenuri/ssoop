@@ -1,9 +1,15 @@
 #include <iostream>
 #include <vector>
 
+// 3. 모든 도형의 공통의 특징(draw()) 는 반드시 기반 클래스(Shape)에도 있어야 한다.
+//    그래야 vector<Shape*> 로 도형을 관리할때
+//    draw() 를 사용할수 있게 된다.
+
 
 class Shape 
 {
+public:
+	void draw() const { std::cout << "draw Shape" << std::endl; }
 };
 
 class Rect : public Shape
@@ -35,8 +41,11 @@ int main()
 		}
 		else if ( cmd == 9 )
 		{
-			for( auto s : v)
-				s->draw(); 
+			for( auto s : v)	// v는 vector<Shape* > 이므로 
+				s->draw(); 		// s는 Shape* 타입입니다.
+								// 이 코드가 컴파일 되려면 Shape 안에 
+								// draw() 가 있어야 합니다.
+								// "upcasting1.cpp" 의 3가지 핵심 참고
 		}
 	}	
 }
