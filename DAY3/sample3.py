@@ -6,10 +6,10 @@ class B:
 		pass
 
 def foo(x):	# 타입이름 없이 변수명(x) 만 표기
-	c.cry()
+	x.cry()
 
 a = A()
 b = B()
 foo(a)
-doo(b)
+foo(b)
 
