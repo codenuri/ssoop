@@ -6,6 +6,7 @@ public:
 	Base()  {  }
 	virtual ~Base() {  } // 핵심 : 기반 클래스로 사용되는 모든 클래스는
 						 //        반드시 소멸자를 virtual 로 해야 한다.
+						// 단, "virtual" 을 사용하지 않고도 해결가능. 
 };
 
 class Derived : public Base
