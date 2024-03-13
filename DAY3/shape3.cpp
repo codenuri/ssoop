@@ -5,22 +5,24 @@
 //    그래야 vector<Shape*> 로 도형을 관리할때
 //    draw() 를 사용할수 있게 된다.
 
+// 4. 기반 클래스의 멤버 함수중에서 "파생클래스가 override 하게 되는 것" 은
+//    반드시 가상함수로 해야 한다.
 
 class Shape 
 {
 public:
-	void draw() const { std::cout << "draw Shape" << std::endl; }
+	virtual void draw() const { std::cout << "draw Shape" << std::endl; }
 };
 
 class Rect : public Shape
 {
 public:
-	void draw() const { std::cout << "draw Rect" << std::endl; }
+	virtual void draw() const { std::cout << "draw Rect" << std::endl; }
 };
 class Circle : public Shape
 {
 public:
-	void draw() const { std::cout << "draw Circle" << std::endl; }
+	virtual void draw() const { std::cout << "draw Circle" << std::endl; }
 };
 int main()
 {
