@@ -8,11 +8,9 @@ int db_backup()
 {
 	if (1)  // 실패 라고 가정
 		throw 1;	// 예외 전달(throw, 던진다고 표현)
-
 	return 100;
 }
-
-void db_remove() {}
+void db_remove() { std::cout << "db remove\n"; }
 
 int main()
 {
