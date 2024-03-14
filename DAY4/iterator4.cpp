@@ -23,12 +23,16 @@ int main()
 		std::cout << c[i] << ", ";
 
 	// #2. 반복자 사용해서 열거 - 권장, 모든 컨테이너 가능
-	auto first = c.begin();
-	auto last  = c.end();
+//	auto first = c.begin();
+//	auto last  = c.end();
+
+	auto first = std::next( c.begin(), 3);
+	auto last  = std::prev( c.end(), 3);
+
 
 	while( first != last )
 	{
-		std::cout << *firs << ", ";
+		std::cout << *first << ", ";
 		++first;
 	}
 
