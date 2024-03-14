@@ -38,12 +38,13 @@ public:
 		{
 			std::cout << i + 1 << ". " << v[i]->get_title() << std::endl;
 		}
-
 		std::cout << sz + 1 << ". 종료\n";
-		
+
 		std::cout << "메뉴를 선택하세요 >> ";
 		int cmd;
 		std::cin >> cmd;
+
+		v[cmd-1]->command(); // MenuItem 도 선택시 command()호출.. 
 	}
 };
 
