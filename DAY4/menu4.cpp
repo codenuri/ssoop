@@ -23,7 +23,11 @@ public:
 	virtual ~BaseMenu() {}
 
 	std::string get_title() const { return title;}
+
+	// 모든 메뉴가 선택되면 command 호출하기로 약속
+	virtual void command() = 0;
 };
+
 //---------------------------------
 class MenuItem : public BaseMenu
 {
