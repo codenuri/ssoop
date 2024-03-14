@@ -16,9 +16,14 @@ public:
 		: title{title}, id{id} {}
 
 	std::string get_title() const { return title;}
+
+	void command()
+	{
+		std::cout << get_title() << " 메뉴 선택됨\n";
+
+		_getch();	// 아무키나 누를때 까지 잠시 대기
+	}
 };
-
-
 
 
 int main()
