@@ -1,7 +1,7 @@
 #include <iostream>
 
 // 아래 함수를 라이브러리 내부 함수라고 생각해 봅시다.
-template<typename T>
+template<typename T = void(*)() >
 void some_work( T f = nullptr )
 {	
 	// 이 함수는 너무중요한 일을 하므로 절대 오류가 발생하면 안된 다고 가정.
