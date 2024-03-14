@@ -50,8 +50,14 @@ int main()
 	// => 이유는 아래 참고
 
 	int n = 0;
-	Point p4 = p1 + p2;	// operator+(Point, Point)
-	Point p5 = p1 + n;	// ??
-	Point p6 = n  + p2; // ??
+	Point p4 = p1 + p2;	// p1.operator+(Point)
+	Point p5 = p1 + n;	// p1.operator+(int)   가 있어야 합니다.
+	Point p6 = n  + p2; // n.operator+(Point) 가 되어야 하는데..
+						// => n 은 int 입니다.
+						// => 따라서 멤버로 만들수 없습니다
+						// => 하지만 non-member 로는 가능
+						// => operator+(int, Point)
+
+	
 }
 
