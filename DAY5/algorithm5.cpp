@@ -14,8 +14,11 @@ int main()
 	 
 
 	// v에서 "짝수"를 0으로 변경해 보세요 - 람다 표현식 사용해 보세요
-	
+	std::replace_if( v.begin(), v.end(),
+				 [](int n) { return n % 2 == 0; }, 0 );
+
 
 	for (auto e : v)
 		std::cout << e << ", ";
+						// 1, 0, 9, 0, -1, 0, 7, -1, 9, 0
 }
