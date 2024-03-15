@@ -12,4 +12,19 @@ int main()
 
 	for( auto e : v)
 		std::cout << e << ", ";
+
+	std::cout << std::endl;
+	
+	int n = std::accumulate(v.begin(), v.end(), 0);
+
+	std::cout << n << std::endl;
+	//=====================
+	std::string s1 = "abcdefghijk";
+	std::string s2 = "def";
+
+	auto ret = std::search( s1.begin(), s1.end(),   // 이구간에서
+							s2.begin(), s2.end());  // 이구간의내용을 검색
+
+	// ret 는 누구의 반복자 일까요 ? s1 ? s2 ?
+
 }
