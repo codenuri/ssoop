@@ -1,11 +1,10 @@
 // 1. virtual 은 선언부에만 표기 합니다.
+// 2. override 도 선언부에만 표기 합니다.
 
 // g++ cpp_file3-1.cpp menu.cpp  
 
 #include "menu.h"
  
-
-
 
 int main()
 {

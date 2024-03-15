@@ -15,7 +15,7 @@ std::string BaseMenu::get_title() const { return title;}
 MenuItem::MenuItem(const std::string& title, int id) 
 	: BaseMenu{title}, id{id} {}
 
-void MenuItem::command() override
+void MenuItem::command() 
 {
 	std::cout << get_title() << " 메뉴 선택됨\n";
 	_getch();	
@@ -30,7 +30,7 @@ PopupMenu::PopupMenu( const std::string& title ) : BaseMenu{title} {}
 
 void PopupMenu::add(BaseMenu* m) { v.push_back(m); }
 
-void PopupMenu::command() override 
+void PopupMenu::command()  
 {
 	while(1)
 	{
