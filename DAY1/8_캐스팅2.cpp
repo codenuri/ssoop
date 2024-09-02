@@ -29,7 +29,8 @@ int main()
 
 
 	// #2. int* => double*
-	double* p4 = static_cast<double*>( &n );
+	double* p4 = static_cast<double*>( &n ); // error
+	double* p5 = (double*)&n; // ok. 
 
 
 }
