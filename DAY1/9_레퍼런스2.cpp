@@ -24,4 +24,8 @@ int main()
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << c << std::endl;
+
+
+//	int& & r1 = n; // error. reference 의 reference
+//	int&& r1 = 0; // ok. rvalue reference 
 }
