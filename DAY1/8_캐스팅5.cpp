@@ -11,8 +11,14 @@
 //	double* p = const_cast<double*>(&c); // error.	
 										 // 동일 타입 const 만제거가능
 
-	double* p = reinterpret_cast<double*>( const_cast<int*>(&c) );
+	double* p1 = reinterpret_cast<double*>( const_cast<int*>(&c) );
 				// ok. 2번의 캐스팅 필요
+				// const int* => int*
+				// int* => double*
+
+	double* p2 = const_cast<double*>(reinterpret_cast<const double*>(&c));
+				// const int* => const double* 
+				// const double* => double* 
 
 }
 
