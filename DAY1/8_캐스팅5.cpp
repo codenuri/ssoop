@@ -7,7 +7,12 @@
 
 	// C++ 스타일 캐스팅으로 위 코드 만들어보세요
 
-	double* p = ??   &c; // ok..
+//	double* p = reinterpret_cast<double*>(&c); // error. c는 const
+//	double* p = const_cast<double*>(&c); // error.	
+										 // 동일 타입 const 만제거가능
+
+	double* p = reinterpret_cast<double*>( const_cast<int*>(&c) );
+				// ok. 2번의 캐스팅 필요
 
 }
 
