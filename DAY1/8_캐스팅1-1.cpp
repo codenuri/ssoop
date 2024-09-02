@@ -23,7 +23,7 @@ int main()
 
 	int* p = (int*)&c;
 
-	*p = 20;
+	*p = 20; // 위 캐스팅이 되면 이 코드가 ok. 
 
 	std::cout << c << std::endl; // 10 ? 20
 	std::cout << *p << std::endl;// 10 ? 20
