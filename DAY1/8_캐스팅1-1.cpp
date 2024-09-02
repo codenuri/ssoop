@@ -19,12 +19,22 @@ int main()
 
 int main()
 {
-	const int c = 10;
+//	const int c = 10; // 컴파일 시간 상수
+						// 컴파일러가 초기값을 알고 있다
+						// "A" 부분의 c 를 "10"으로 컴파일 할때 치환
 
-	int* p = (int*)&c;
+	int n = 10;
+	const int c = n;	// 실행시간 상수
+						// 컴파일러가 초기값 모름.
+						// "A" 부분의 c 는 메모리에서 읽어오는 코드생성
+
+						// 단,컴파일러에 따라 다를수 있다.
+
+	int* p = (int*)&c;  // 결론, 이 캐스팅은 너무 위험 하다.
+
 
 	*p = 20; // 위 캐스팅이 되면 이 코드가 ok. 
 
-	std::cout << c << std::endl; // 10 ? 20
-	std::cout << *p << std::endl;// 10 ? 20
+	std::cout << c << std::endl; // 10   20 << ==== "A"
+	std::cout << *p << std::endl;// 20   20
 }
