@@ -32,3 +32,6 @@ int main()
 
 // 2. 인자 타입이 user define type(구조체, 클래스) - const reference
 //    void f2(const Rect& rc) {}
+
+
+// 구글. "C++ core guideline"  검색후 1번째 링크. 
