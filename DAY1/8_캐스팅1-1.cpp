@@ -25,5 +25,6 @@ int main()
 
 	*p = 20;
 
-	std::cout << c << ", " << *p << std::endl; // ?  ? 
+	std::cout << c << std::endl; // 10 ? 20
+	std::cout << *p << std::endl;// 10 ? 20
 }
