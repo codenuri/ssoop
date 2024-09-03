@@ -9,12 +9,13 @@
 
 class vector
 {
-
 };
 
 int main()
 {
+	// 목표
 	vector v(4, 3);  // 4개를 3으로
+
 	std::cout << v.at(0) << std::endl; // 3
 
 	v.resize(8); // 8 개로 키우기, 
