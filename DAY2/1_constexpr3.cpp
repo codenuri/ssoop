@@ -6,6 +6,8 @@ int fact1(int n)
 	return n * fact1(n - 1);
 }
 
+// 인자값을 컴파일 할때 알수 있으면 "컴파일 시간"
+// 인자값을 컴파일 할때 알수 없으면 "실행 시간" 에 수행. 
 constexpr int fact2(int n)
 {
 	if (n == 1) return 1;
@@ -31,4 +33,5 @@ int main()
 						 // 실행할때 호출
 
 	constexpr int ret5 = fact2(k); // error.
+	const int ret6 = fact2(k); // ok. const 는 readonly 만 요구하므로
 }
