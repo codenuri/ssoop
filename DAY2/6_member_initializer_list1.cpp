@@ -14,12 +14,12 @@ public:
 	// #1. {} 안에서 대입
 	Point(int a, int b) 		
 	{
-		x = a; 
+		x = a; // 대입(assignment)
 		y = b;
 	}
 
-	// #2. member initializer list 사용.
-	Point(int a, int b) : x(a), y(b) 
+	// #2. member initializer list(멤버 초기화 리스트) 사용.
+	Point(int a, int b) : x(a), y(b)  // 초기화(initialization)
 	{
 	}
 
