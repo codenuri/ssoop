@@ -4,9 +4,13 @@
 class Point
 {
 	int x, y;
-
-	char cache[32];
-	bool valid = false;
+	
+	// mutable 멤버 데이타
+	// => 상수 멤버 함수에서도 "값을 수정할수 있도록 해달라"
+	// => to_string() 처럼, 논리적으로는 "상수 멤버 함수" 가 맞지만
+	// => 다양한 테크닉상 멤버의 변경이 필요한 경우 사용. 
+	mutable char cache[32];
+	mutable bool valid = false;
 public:
 	Point(int a, int b) : x{ a }, y{ b } {}
 
