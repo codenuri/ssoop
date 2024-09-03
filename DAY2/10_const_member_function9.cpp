@@ -58,8 +58,13 @@ public:
 	// template 을 적용해서 2개 함수를 자동생성할수 있게 됩니다
 	// => "deducing this" 라고 알려진 기술
 	// => this 의 타입을 추론하겠다는 의미.
+
+	// U 가 const 여부에 따라 반환 타입을 다르게 합니다.
+	// U 가 const     : const T& 반환
+	// U 가 non-const : T& 반환
 	template<typename U>
-	decltpe(auto) at( this U& self, int idx) { return self.ptr[idx]; }
+	std::conditional_t<std::is_const_v<U>, const T&, T&>
+	at(this U& self, int idx) { return self.ptr[idx]; }
 };
 
 
