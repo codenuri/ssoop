@@ -29,7 +29,9 @@ public:
 	void set2(this Point& self, int a, int b)
 	{
 		self.x = a;				
-		self.y = b;				
+		self.y = b;		
+
+		std::cout << &self << std::endl;
 	}
 
 };
