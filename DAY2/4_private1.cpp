@@ -10,6 +10,11 @@
 // 구조체 안에 함수를 넣었기 때문에
 // => private, public 같은 개념을 사용할수 있습니다.
 
+
+// 거의 모든 객체지향언어에는 "private, public" 이 있습니다.
+// => 그런데, python 에 없습니다.!!
+// => "python" 이 "객체지향 언어일까 ?" 라는 관점도 많습니다.
+
 struct Person
 {
 private:				// private 영역
