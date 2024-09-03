@@ -43,10 +43,12 @@ int main()
 	      vector<int> v1(4, 1);
 	const vector<int> v2(4, 1);
 
-					   // 목표		현재 상황
-	int n1 = v1.at(0); // O
-	int n2 = v2.at(0); // O
+	// #1. at() 이 const 멤버 함수가 아닌경우.
 
-	v1.at(0) = 10;	   // O
-	v2.at(0) = 10;     // X
+					   // 목표		현재 상황
+	int n1 = v1.at(0); // O			O
+	int n2 = v2.at(0); // O			X		<= 잘못된 동작
+
+	v1.at(0) = 10;	   // O			O
+	v2.at(0) = 10;     // X			X
 }
