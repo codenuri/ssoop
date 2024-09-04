@@ -1,0 +1,31 @@
+#include <vector>
+
+class Animal
+{
+public:	int age;
+};
+class Dog : public Animal
+{
+public:	int color;
+};
+class Cat : public Animal
+{
+public:	int speed;
+};
+
+int main()
+{
+	// Upcasting 활용/장점
+	std::vector<Dog*>    v1; // Dog 객체만 보관하겠다는 의도
+	std::vector<Animal*> v2; // Animal 뿐 아니라, 모든 파생클래스객체도
+							// 보관 가능
+							// 동종("동일 기반 클래스사용하는 타입")을
+							// 보관하는 컨테이너(배열같이 저장하는 타입)
+
+}
+
+// 활용/장점 #2
+void new_year(Dog* p)
+{
+	++(p->age);
+}
