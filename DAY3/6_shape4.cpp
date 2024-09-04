@@ -13,6 +13,19 @@ class Shape
 {
 	int color;
 public:
+	
+	// 아래 함수는 "virtual" 로 할까요 ? "non-virtual"로 할까요 ?
+	// => 파생클래스가 override 할필요 없다. non-virtual
+	void set_color(int c) { color = c; }
+
+	// 도형의 면적을 구하는 방법은 각 도형마다 다릅니다.
+	// => 파생 클래스가 override 하게 됩니다.
+	// => 그래서 virtual 로 해야 합니다.
+	virtual	int get_area() const { return 0; }
+
+
+
+
 	virtual void draw() { std::cout << "draw shape\n"; }
 };
 
