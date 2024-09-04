@@ -58,4 +58,8 @@ int main()
 
 	// 윤년인지 조사하는 is_leap_year() 를 만들려고 합니다.
 	// static 으로 할까요 ? non_static 으로 할까 ?
+	// => 2개 만드시면 됩니다
+	// => 복습할때 구현해 보세요.. 
+	bool b1 = today.is_leap_year(); // today 안에 있는 year 가 윤년인가 ?
+	bool b2 = Date::is_leap_year(2025); // 2025 년이 윤년인가 ?
 }
