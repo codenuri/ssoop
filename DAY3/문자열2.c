@@ -15,8 +15,15 @@ int main()
 
 	// #2. 문자열 배열이 아닌 문자열 포인터를 사용할때는
 	// "char*" 가 아닌 "const char*" 로 하는 것이 좋습니다.
+
+//	char* sp = "efgh"; // 상수 메모리에 있는 문자열을 
+						// 상수가 아닌것을 가리키는 포인터에 담는 것은
+						// 논리적으로 맞지 않다.
+						// C언어 : 허용하지만, *sp = 'X' 사용시 런타임에러
+						// C++ 언어 : error 
+
 	const char* sp = "efgh";
-	*sp = 'X';
+	*sp = 'X'; // compile time error
 
 
 	printf("=====\n");
