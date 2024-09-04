@@ -15,17 +15,22 @@ public:
 	// 가상함수     : 파생 클래스가 override 하지 않으면 디폴트 구현 제공한다는 의도
 	// 순수가상함수 : 파생 클래스에게 반드시 구현부를 제공하라는 의도
 
-	virtual void draw() { std::cout << "draw shape\n"; }
+//	virtual void draw() { std::cout << "draw shape\n"; }
+	virtual void draw() = 0;  // 이코드가 좋은 코드!!
+
+	// 주의. 위 선언도 없다면(순수가상함수도 없다면)
+	// Shape* 로 draw 호출 안됨.
+
 };
-
-
 
 
 class Rect : public Shape
 {
 public:
-	void draw() override { std::cout << "draw rect\n"; }
+//	void draw() override { std::cout << "draw rect\n"; }
 };
+
+
 class Circle : public Shape
 {
 public:
