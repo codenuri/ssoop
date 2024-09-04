@@ -6,12 +6,14 @@
 //     모든 도형을 그릴수 있다면, draw 는 Shape 에도 있어야 한다.
 //     => 객체지향 디자인의 원칙!!!
 
+// #2. 기반 클래스 멤버 함수중 파생 클래스가 override 하게 되는 것은
+//	   "virtual" 로 해야 한다.
 
 class Shape
 {
 	int color;
 public:
-	void draw() { std::cout << "draw shape\n"; }
+	virtual void draw() { std::cout << "draw shape\n"; }
 };
 
 class Rect : public Shape
