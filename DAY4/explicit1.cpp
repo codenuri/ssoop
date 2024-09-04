@@ -2,8 +2,11 @@
 class vector
 {
 public:
-	vector(int sz) {}
+	// explicit 생성자 : direct initialization 만 가능하고
+	//					copy initialization 은 사용할수 없다.
+	explicit vector(int sz) {}
 };
+
 void foo(vector v) {}
 
 int main()
