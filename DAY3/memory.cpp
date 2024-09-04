@@ -19,3 +19,11 @@ int main()
 //	const char* sp = "abcd";
 //	char sa[] = "abcd";
 }
+
+// 복습할때
+// 1. 위코드를 32비트(x86) 으로 빌드후
+// 2. 인터넷에서 Peview.exe 를 구하세요
+// 3. PEView 에서 열어 보세요
+
+// 윈도우에서 .exe 을 "PE 포맷" 이라고 합니다.
+// 리눅스    "ELF" 라고 합니다.
