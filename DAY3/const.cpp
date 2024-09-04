@@ -44,5 +44,6 @@ int main()
 
 	
 	// 질문 아래 코드는 어디가 상수 일까요 ?
-	int const* p3 = &n;
+	int const* p3 = &n; // 이코드는 아래 코드와 동일.
+	const int* p1 = &n; // 즉, const 와 타입의 위치는 변경가능
 }
