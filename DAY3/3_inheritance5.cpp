@@ -20,12 +20,18 @@ class Student : public Peolple
 {
 	int id;
 public:
+	// 아래 처럼 만들면, 오른쪽 주석처럼 변경됩니다.
+	// => People 에 디폴트 생성자가 없으므로 에러
+	// Student(int id) : id{ id } {} // Student(int id) : People{}, id{id} {}
 
+	Student(const std::string& name, int age, int id) 
+		: People{name, age}, id { id } {}
 };
-
 
 int main()
 {
+	Student s{ "kim", 30, 15 }; 
+
 	People p("kim", 30);
 
 //	People p;	// 이렇게 객체를 만들수 있게 하면 좋을까요 ?
