@@ -13,9 +13,15 @@ public:
 };
 // 1. People 에서 파생된 Student 만드세요
 // 2. "int id" 멤버 데이타 추가하세요
-// 3. Student 만드세요
+// 3. Student 생성자 만드세요
 // 4. main 에서 Student 객체 생성해 보세요
 
+class Student : public Peolple
+{
+	int id;
+public:
+
+};
 
 
 int main()
