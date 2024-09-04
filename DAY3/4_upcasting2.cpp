@@ -25,7 +25,9 @@ int main()
 }
 
 // 활용/장점 #2
-void new_year(Dog* p)
+// => 동종을 처리하는 함수 만들기.. 
+//void new_year(Dog* p)  // Dog 만 인자로 받을수 있는 함수
+void new_year(Animal* p) // 모든 동물을 인자로 받을수 있는 함수
 {
 	++(p->age);
 }
