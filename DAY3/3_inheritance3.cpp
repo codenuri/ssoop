@@ -20,7 +20,6 @@ public:
 	{ 
 		std::cout << "Derived()" << std::endl; 
 	} 
-
 	Derived(int a)		// Derived(int a) : Base() <= 컴파일러 추가 코드는 항상
 	{												 // Base 의 디폴트 생성자 호출
 		std::cout << "Derived(int)" << std::endl; 
