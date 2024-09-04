@@ -38,8 +38,11 @@ int main()
 		else if (cmd == 9)
 		{
 			// 모든 도형을 화면에 그리기
-			for (auto s : v)
-				s->draw();
+			for (auto s : v) // 이코드에서 s 의 타입은 "Shape*"
+				s->draw();   // 그런데, Shape 에는 draw 가 없다.
+							 // 기반 클래스포인터로는 
+							 // "파생 클래스가 추가한 멤버 접근 안됨"
+							 // 그래서 여기서 에러!!
 
 		}
 	}
