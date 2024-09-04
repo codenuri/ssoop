@@ -1,21 +1,25 @@
 #include <iostream>
 #include <vector>
 
-// 코드 정리
-
 class Shape
 {
 	int color;
 public:
-	virtual ~Shape() {}  // 기반 클래스 소멸자는 "virtual" 이어야 한다
+	virtual ~Shape() {}  
 
 
 	void set_color(int c) { color = c; }
 
 	virtual	int get_area() const { return 0; }
 
+	// 가상함수     : 파생 클래스가 override 하지 않으면 디폴트 구현 제공한다는 의도
+	// 순수가상함수 : 파생 클래스에게 반드시 구현부를 제공하라는 의도
+
 	virtual void draw() { std::cout << "draw shape\n"; }
 };
+
+
+
 
 class Rect : public Shape
 {
