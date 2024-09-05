@@ -11,7 +11,8 @@ namespace std
 	
 		ostream& operator<<( ostream&(*f)(ostream& ) ) 
 		{ 
-			? ;
+			f(*this); // std::endl( std::cout )
+					  // 결국 endl 을 호출한것
 			return *this; 
 		}
 	
