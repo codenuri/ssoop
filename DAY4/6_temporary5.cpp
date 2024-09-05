@@ -16,6 +16,8 @@ public:
 		std::cout << "Counter(const Counter& other)\n";
 	}
 	~Counter() { std::cout << "~Counter()\n"; }
+
+	Counter() {}
 };
 
 int main()
