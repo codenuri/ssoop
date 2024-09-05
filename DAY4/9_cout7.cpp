@@ -23,8 +23,20 @@ namespace std
 	}
 }
 
+
+std::ostream& tab(std::ostream& os)
+{
+	os << "\t";
+	return os;
+}
+
 int main()
 {
+//	std::cout << tab;	// cout.operator<<(tab)
+						// cout.operator<<(tab 함수 주소)
+
+	std::cout << two_endl;
+
 	std::cout << "A" << tab << "B" << std::endl;
 }
 
