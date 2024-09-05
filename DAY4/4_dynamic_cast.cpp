@@ -4,7 +4,10 @@ class Animal
 {
 public:
 	int age;
+
+	virtual ~Animal() {}
 };
+
 class Dog : public Animal
 {
 public:
@@ -36,6 +39,8 @@ int main()
 	// dynamic_cast : 실행시간 캐스팅
 	//				  조사해야 하므로 오버헤드 있습니다.
 	//				  p 가 가리키는 객체가 Dog 가 아니면 "0" 반환
+	//				  "가상함수가 있는 타입만 사용가능"
+	//				  가상함수 테이블에 "타입정보"를 보관하고 있기 때문에. 
 
 	Dog* pd = dynamic_cast<Dog*>(p);
 	std::cout << pd << std::endl;
