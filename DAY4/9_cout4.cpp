@@ -1,5 +1,10 @@
 #include <iostream>
 
+// 핵심
+// 사용자 정의 타입의 객체를 std::cout 으로 만들려면
+// => operator<<() 를 일반함수 버전을 만들면 됩니다.
+// => 아래 예제 참고. 
+
 class Point
 {
 	int x;
