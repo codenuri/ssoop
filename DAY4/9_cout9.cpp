@@ -19,9 +19,11 @@ int main()
 
 			// 다시입력 받기전에 "입력버퍼 비워야 합니다"
 			// C : fflush(stdin), C++ : 아래 코드
-			std::cin.ignore();
 
-			continue;
+			std::cin.clear(); // 1. cin 이 가진 state 멤버를 reset 하고
+			std::cin.ignore();// 2. 입력버퍼를 비우고,
+
+			continue;		  // 다시 시도
 		}
 		break;
 	}
