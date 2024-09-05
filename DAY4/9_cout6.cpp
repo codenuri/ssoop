@@ -8,7 +8,15 @@ namespace std
 		ostream& operator<<(int n) { printf("%d", n);         return *this; }
 		ostream& operator<<(double d) { printf("%f", d);      return *this; }
 		ostream& operator<<(const char* s) { printf("%s", s); return *this; }
+	
+		ostream& operator<<( ostream&(*f)(ostream& ) ) 
+		{ 
+			? ;
+			return *this; 
+		}
+	
 	};
+
 	ostream cout;
 
 
@@ -23,6 +31,9 @@ int main()
 {
 	std::cout << std::endl; // endl 의 정체는 함수 입니다.
 							// char* endl = "\n" 가 아닙니다.
+							
+							// cout.operator<<(endl)
+							// cout.operator<<(함수포인터)
 
 	std::endl( std::cout );   // 위 코드는 이코드와 동일합니다.
 }
