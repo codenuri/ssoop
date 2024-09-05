@@ -14,39 +14,20 @@ class ICamera
 class Person
 {
 public:
-	void use_camera(? c) { c->take(); }
+	void use_camera(ICamera* c) { c->take(); }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Camera
+// 모든 카메라 제품은 규칙을 지켜야 합니다.
+class Camera : public ICamera
 {
 public:
-	void take() { std::cout << "take picture" << std::endl; }
+	void take() override { std::cout << "take picture" << std::endl; }
 };
 
-class HDCamera
+class HDCamera : public ICamera
 {
 public:
-	void take() { std::cout << "take HD picture" << std::endl; }
-};
-
-class Person
-{
-public:
-	void use_camera(Camera* c) { c->take(); }
-	void use_camera(HDCamera* c) { c->take(); }
+	void take() override { std::cout << "take HD picture" << std::endl; }
 };
 
 int main()
