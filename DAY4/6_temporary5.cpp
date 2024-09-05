@@ -4,7 +4,8 @@ class Counter
 {
 	int cnt = 0;
 public:
-	Counter increment()
+//	Counter increment()		// 값반환, "*this" 의 복사본 임시객체 생성
+	Counter& increment()	// 참조 반환, "임시객체가 아닌" *this 자체 별명반환
 	{
 		++cnt;
 		return *this;
