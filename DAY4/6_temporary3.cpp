@@ -23,7 +23,9 @@ int main()
 						// {} 을 벗어나야 파괴 됩니다.
 
 	// 임시객체로 전달
-	draw_line(Point(1, 1), Point(5, 5));
+	// => 인자 전달에만 사용되고,
+	// => 함수 호출이 종료 되면 파괴 됩니다.
+	//draw_line( Point(1, 1), Point(5, 5) );
 
 
 	std::cout << "-----" << std::endl;
