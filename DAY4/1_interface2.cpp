@@ -9,6 +9,13 @@ class ICamera
 	virtual void take() = 0;
 };
 
+// 카메라 사용자는 "구체적인 제품"을 사용하지 말고(의존하지 말고)
+// 규칙대로 사용하면 됩니다.
+class Person
+{
+public:
+	void use_camera(? c) { c->take(); }
+};
 
 
 
