@@ -9,6 +9,13 @@ public:
 	void print() const { std::cout << x << ", " << y << std::endl; }
 };
 
+Point operator+(Point p1, Point p2)
+{
+	Point ret(p1.x + p2.x, p1.y + p2.y);
+
+	return ret;
+}
+
 int main()
 {
 	Point p1(1, 1);
