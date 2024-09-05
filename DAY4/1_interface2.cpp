@@ -30,6 +30,12 @@ public:
 	void take() override { std::cout << "take HD picture" << std::endl; }
 };
 
+class UHDCamera : public ICamera
+{
+public:
+	void take() override { std::cout << "take UHD picture" << std::endl; }
+};
+
 int main()
 {
 	Person p;
@@ -38,7 +44,12 @@ int main()
 	p.use_camera(&c);
 
 	HDCamera hc;
-	p.use_camera(&hc); // ???
+	p.use_camera(&hc); 
+
+	UHDCamera uhc;
+	p.use_camera(&uhc); // Person 코드의 수정없이
+						// 나중에 추가된 카메라를 사용할수 있다.
+						// OCP 만족!!!
 }
 
 
