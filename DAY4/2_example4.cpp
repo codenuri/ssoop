@@ -17,7 +17,12 @@ public:
 
 	std::string get_title() const { return title; }
 	virtual ~BaseMenu() {}
+
+	// 모든 메뉴는 선택될수 있다.
+	virtual void command() = 0;
 };
+
+
 
 class MenuItem : public BaseMenu
 {
@@ -77,6 +82,10 @@ public:
 
 	}
 };
+
+
+
+
 
 int main()
 {
