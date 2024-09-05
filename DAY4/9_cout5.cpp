@@ -12,8 +12,12 @@ int main()
 	os << "hello" << std::endl;
 
 
-	// #2. const 별명을 만들면 사용할수 없습니다
+	// #2. const 별명을 만들수는 있지만
+	//     상수 별명으로는 "operator<<" 사용할수 없습니다
 	const std::ostream& cos = std::cout;
 
 	cos << "hello"; // error. 왜 에러일까요 ? 
+//  cout.operator<<("hello")  인데, cout 상수 객체 입니다.
+	//					      => 그런데, 상수 객체는 상수멤버함수만 호출가능
+	//						  => operato<< 은 상수멤버함수 아닙니다.
 }
