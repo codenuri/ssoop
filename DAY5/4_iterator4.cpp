@@ -18,6 +18,7 @@ int main()
 
 
 	// 방법 #2. 반복자(iterator) 사용
+	// => 모든 컨테이너에서 사용가능
 
 	auto first = c.begin();
 	auto last = c.end();
@@ -26,6 +27,14 @@ int main()
 	{
 		*first = 0; // 모든 요소에 0넣기
 		++first;
+	}
+
+	// 방법 #3. C++11 에서 추가된 "range-for" 사용
+	// => 결국 아래 코드는 위코드와 완벽히 동일한 코드
+	// => 그런데, 훨씬 간결하다. !! 권장
+	for (auto& e : c)
+	{
+		e = 0;
 	}
 }
 
