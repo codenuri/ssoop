@@ -11,9 +11,10 @@ int main()
 									  // 초기값이 있으면타입생략가능
 	
 	// 아래 코드 주의 하세요!!
-	std::vector<int> v4(10, 2);
-	std::vector<int> v5{10, 2};
+	std::vector<int> v4(10, 2); // 10개를 2로 초기화
+	std::vector<int> v5{10, 2}; // 2개를 10, 2로 초기화
 	
 
+	// 위내용은 vector 뿐아니라, list, deque 도 모두 적용되는 이야기.
 
 }
