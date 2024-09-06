@@ -10,7 +10,9 @@ int main()
 	auto f = [](int a, int b) { return a + b; };
 				// class xxx{ operator()() {} }; xxx{};
 
-	int n = f(1, 2);
+	int n1 = f(1, 2);
+	int n2 = f.operator()(1, 2); // ok 이렇게 해도 됩니다.
+								// 결국 람다 표현식은 함수객체이므로
 
 	// 람다 표현식의 주된 활용
 	// #1. find_if 같은 알고리즘에서 인자로 전달
