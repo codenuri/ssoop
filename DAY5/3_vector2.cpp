@@ -37,6 +37,16 @@ int main()
 
 	std::cout << v.size() << ", " << v.capacity() << std::endl;
 									// 7, 9
+
+	v.clear();	// 1. 실제 메모리를 지운다!!
+				// 2. size만 0으로 하고 메모리는 계속 있다 => 정답
+
+	std::cout << v.size() << ", " << v.capacity() << std::endl;
+					// 0, 9
+
+	v.shrink_to_fit();
+	std::cout << v.size() << ", " << v.capacity() << std::endl;
+					// 0, 0
 }
 
 // 위 코드는 연속된 메모리를 사용하는 컨테이너만 적용됩니다.
