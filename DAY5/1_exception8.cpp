@@ -21,8 +21,19 @@ int main()
 {
 	bool b1 = noexcept(foo()); // "foo()" 라고 호출할때(실제호출하는것은 아님)
 								// 예외 발생 가능성이 있는지 조사
-	bool b2 = noexcept(goo());
+							
+	bool b2 = noexcept(goo());	// 원리 : 함수 선언뒤에
+								//		noexcept 가 있는지 조사하는것
 
 	std::cout << b1 << std::endl;
 	std::cout << b2 << std::endl;
+
+	// 예외 발생 여부에 따라 다른 함수를 선택할수 있습니다.
+	if (noexcept(foo()) == true)
+		foo(); // 사용.!!
+	else
+		goo(); // 느리지만, 예외가 없으므로 안전한 함수
 }
+
+
+
